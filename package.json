@@ -1,0 +1,23 @@
+{
+  "name": "online-poll-and-survey-system",
+  "version": "1.0.0",
+  "description": "Full-stack Online Poll & Survey System with React, Express, MongoDB Atlas, real-time analytics, and CSV/PDF export.",
+  "main": "server/index.js",
+  "scripts": {
+    "install:server": "npm install --prefix server",
+    "install:client": "npm install --prefix client",
+    "install:all": "npm install && npm run install:server && npm run install:client",
+    "build:client": "npm run build --prefix client",
+    "build": "npm run install:all && npm run build:client",
+    "start": "node server/index.js",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
